@@ -1,0 +1,27 @@
+# SANO TECH SHOP
+
+# Private configuration
+config/config.php
+includes/db.php
+create_admin.php
+# Environment / secrets
+.env
+.env.*
+
+# Composer dependencies
+vendor/
+
+# Uploaded files
+uploads/*
+!uploads/.gitkeep
+
+# Windows files
+Thumbs.db
+desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
+
+# Logs
+*.log

@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   TOPBAR
+========================== */
+
+.user-topbar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:70px;
+    background:#ffffff;
+    border-bottom:1px solid #e5e7eb;
+    display:flex;
+    align-items:center;
+    z-index:1050;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.user-sidebar{
+    position:fixed;
+    top:70px;
+    left:0;
+    width:250px;
+    height:calc(100vh - 70px);
+    background:#111827;
+    overflow-y:auto;
+    overflow-x:hidden;
+    z-index:1040;
+    transition:.3s;
+}
+
+.user-sidebar::-webkit-scrollbar{
+    width:6px;
+}
+
+.user-sidebar::-webkit-scrollbar-thumb{
+    background:#334155;
+    border-radius:20px;
+}
+
+/* ==========================
+   SIDEBAR HEADER
+========================== */
+
+.sidebar-header{
+    padding:20px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.sidebar-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+
+.sidebar-logo{
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    object-fit:cover;
+    background:#fff;
+}
+
+.sidebar-brand-text h5{
+    color:#fff;
+    margin:0;
+    font-size:17px;
+    font-weight:700;
+}
+
+.sidebar-brand-text small{
+    color:#94a3b8;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.sidebar-menu{
+    padding:15px;
+}
+
+.sidebar-menu ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.sidebar-menu li{
+    margin-bottom:6px;
+}
+
+.sidebar-menu a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#cbd5e1;
+    text-decoration:none;
+    padding:12px 15px;
+    border-radius:10px;
+    transition:.25s;
+    font-size:15px;
+}
+
+.sidebar-menu a i{
+    font-size:18px;
+    width:20px;
+}
+
+.sidebar-menu a:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+.sidebar-menu a.active{
+    background:#2563eb;
+    color:#fff;
+}
+
+.sidebar-menu a.text-danger{
+    color:#f87171;
+}
+
+.sidebar-menu a.text-danger:hover{
+    background:#dc2626;
+    color:#fff;
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.user-content{
+    margin-top:70px;
+    margin-left:250px;
+    padding:30px;
+    min-height:100vh;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+}
+
+/* ==========================
+   SEARCH
+========================== */
+
+.search-input{
+    width:300px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    padding:8px 14px;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+.table th{
+    white-space:nowrap;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:992px){
+
+.user-sidebar{
+    width:220px;
+}
+
+.user-content{
+    margin-left:220px;
+}
+
+}
+
+@media(max-width:768px){
+
+.user-sidebar{
+    left:-250px;
+}
+
+.user-sidebar.show{
+    left:0;
+}
+
+.user-content{
+    margin-left:0;
+    padding:20px;
+}
+
+.search-input{
+    width:180px;
+}
+
+}

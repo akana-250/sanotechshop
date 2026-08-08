@@ -1,0 +1,40 @@
+<?php
+/*
+ Simple Code128 Barcode Generator
+*/
+
+
+function generateBarcode($text){
+
+    $bars = "";
+
+    $length = strlen($text);
+
+
+    for($i = 0; $i < $length; $i++){
+
+        $value = ord($text[$i]);
+
+
+        for($j = 0; $j < 8; $j++){
+
+            if(($value >> $j) & 1){
+
+                $bars .= "||";
+
+            }else{
+
+                $bars .= "|";
+
+            }
+
+        }
+
+    }
+
+
+    return $bars;
+
+}
+
+?>
